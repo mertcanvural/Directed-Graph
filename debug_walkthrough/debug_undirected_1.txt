@@ -1,0 +1,53 @@
+GraphException: attempting to add duplicate vertex "0"
+GraphException: attempting to add duplicate vertex "2"
+GraphException: attempting to add duplicate edge "(5,0)"
+G = (V, E)
+V = {0,1,3,2,4,5,6,7,8,9}
+E = {(0,5),(1,7),(2,4),(3,6),(4,9),(5,8),(6,9),(7,9),(8,9)}
+while loop pass = 1
+	connectedSubset = {0}
+	newlyAddedVertices = {0}
+	from 0 -> 5 
+while loop pass = 2
+	connectedSubset = {0,5}
+	newlyAddedVertices = {5}
+	from 5 -> 8 
+while loop pass = 3
+	connectedSubset = {0,5,8}
+	newlyAddedVertices = {8}
+	from 8 -> 9 
+while loop pass = 4
+	connectedSubset = {0,5,8,9}
+	newlyAddedVertices = {9}
+	from 9 -> 4 6 7 
+while loop pass = 5
+	connectedSubset = {0,4,5,6,7,8,9}
+	newlyAddedVertices = {4,6,7}
+	from 4 -> 2 
+while loop pass = 6
+	connectedSubset = {0,2,4,5,6,7,8,9}
+	newlyAddedVertices = {6,7,2}
+	from 6 -> 3 
+while loop pass = 7
+	connectedSubset = {0,2,3,4,5,6,7,8,9}
+	newlyAddedVertices = {7,2,3}
+	from 7 -> 1 
+while loop pass = 8
+	connectedSubset = {0,1,2,3,4,5,6,7,8,9}
+	newlyAddedVertices = {2,3,1}
+	from 2 -> 
+while loop pass = 9
+	connectedSubset = {0,1,2,3,4,5,6,7,8,9}
+	newlyAddedVertices = {3,1}
+	from 3 -> 
+while loop pass = 10
+	connectedSubset = {0,1,2,3,4,5,6,7,8,9}
+	newlyAddedVertices = {1}
+	from 1 -> 
+g.isConnected() = true
+time to check if connected 0.006 seconds
+time 0.033 seconds
+duplicate vertices
+0,2
+duplicate or invalid edges
+(5,0)
